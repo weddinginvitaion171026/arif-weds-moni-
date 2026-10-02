@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moni & Arif — Reception Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap');
+:root{--wine:#7d1f39;--gold:#e7c27d;--cream:#f8e8c9;--dark:#140810}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:#fff;font-family:"Cormorant Garamond",serif;overflow-x:hidden}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+#intro{background:radial-gradient(circle at 50% 45%,#62283c,#140810 70%);text-align:center}
+.glow{position:absolute;width:60vmax;height:60vmax;border-radius:50%;background:#f2c77a12;filter:blur(30px);animation:pulse 4s infinite}
+.envelope-wrap{position:relative;z-index:5;cursor:pointer;animation:float 3s ease-in-out infinite}.envelope{width:min(340px,80vw);height:220px;background:#ead3b0;border-radius:6px;position:relative;box-shadow:0 25px 70px #000b}.flap{position:absolute;inset:0;background:#d3b080;clip-path:polygon(0 0,100% 0,50% 58%);z-index:3}.bottom-flap{position:absolute;inset:auto 0 0;height:130px;background:#cba678;clip-path:polygon(0 100%,100% 100%,50% 0);z-index:2}.seal{position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-15%);width:64px;height:64px;border-radius:50%;background:var(--wine);border:4px solid var(--gold);display:grid;place-items:center;font-size:28px}.hint{margin-top:25px;letter-spacing:3px;color:var(--gold)}
+#invite{display:none;background:linear-gradient(160deg,#140810,#40182a 48%,#10070d);padding:70px 18px}
+.content{width:min(900px,100%);text-align:center;z-index:3}.eyebrow{text-transform:uppercase;letter-spacing:4px;color:var(--gold);font-size:13px}.names{font:clamp(55px,12vw,105px)/.9 "Great Vibes",cursive;color:var(--cream);margin:18px 0}.and{font-size:24px;color:var(--gold)}
+.message{max-width:690px;margin:30px auto;font-size:20px;line-height:1.65;color:#eadcc7}.quote{font:32px "Great Vibes",cursive;color:var(--gold)}
+.card{margin:30px auto;padding:30px 20px;border:1px solid #e7c27d55;border-radius:20px;background:#ffffff09;backdrop-filter:blur(8px);box-shadow:0 15px 50px #0005}
+.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:22px}.detail{padding:19px;border-radius:14px;background:#ffffff09}.detail b{display:block;color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:7px}.detail span{font-size:20px}
+.heart-wrap{width:min(340px,80vw);height:300px;margin:20px auto;position:relative}.heart{position:absolute;inset:0;background:#b88b52;clip-path:path("M170 285 C145 260 25 190 25 90 C25 30 100 5 170 75 C240 5 315 30 315 90 C315 190 195 260 170 285 Z");display:flex;align-items:center;justify-content:center;overflow:hidden;filter:drop-shadow(0 15px 30px #0006)}.heart-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#602033;font-weight:600}.heart-inner .date{font-size:32px}.heart canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+#countdown{font-size:clamp(24px,6vw,42px);color:var(--gold);letter-spacing:2px}.music{position:fixed;right:18px;top:18px;z-index:30;width:48px;height:48px;border:1px solid #fff4;background:#ffffff14;color:#fff;border-radius:50%;cursor:pointer}
+.petals{position:fixed;inset:0;pointer-events:none;z-index:8;overflow:hidden}.petal{position:absolute;top:-30px;font-size:23px;animation:fall linear forwards}#fireworks{position:fixed;inset:0;pointer-events:none;z-index:20}.twinkle{position:fixed;width:4px;height:4px;background:#ffe8b0;border-radius:50%;pointer-events:none;animation:twinkle 2s infinite}.final{padding:50px 20px}.footerline{color:#d9c2a4;font-size:19px}
+@keyframes float{50%{transform:translateY(-10px)}}@keyframes pulse{50%{transform:scale(1.12);opacity:.7}}@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}@keyframes twinkle{50%{opacity:.15;transform:scale(.3)}}@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp 1.5s ease both}.maps-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #7d1f39;
+    border: 1px solid #e7c27d;
+    color: #f8e8c9;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.maps-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #0008;
+    background: #922646;
+}
+</style>
+</head>
+<body>
+<script>
+/* ✏️ EASY EDIT AREA */
+const INVITATION={
+ bride:"Moni Begum Laskar",
+ groom:"Arif Jakaria Chowdhury",
+ event:"Reception",
+ date:"17 October 2026",
+ time:"1:30 PM onwards",
+ venue:"KANYADHAN VIVAH BHABAN",
+ location:"Aulia Bazar, Silchar",
+ countdown:"2026-10-17T13:30:00+05:30"
+};
+</script>
+
+<audio id="music" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
+<button class="music" id="musicBtn">♪</button>
+
+<section id="intro" class="screen">
+<div class="glow"></div>
+<div class="envelope-wrap" id="openEnvelope">
+<div class="envelope"><div class="flap"></div><div class="bottom-flap"></div><div class="seal">♥</div></div>
+<div class="hint">TAP TO OPEN ✨</div></div>
+</section>
+
+<section id="invite">
+<canvas id="fireworks"></canvas><div class="petals" id="petals"></div>
+<main class="content">
+<div class="fade"><div class="eyebrow">You are warmly invited to</div><h2 class="quote">An Evening of Love & Celebration</h2></div>
+<div class="fade"><div class="eyebrow">Reception of</div><h1 class="names" id="bride"></h1><div class="and">&</div><h1 class="names" id="groom"></h1></div>
+
+<div class="message fade">
+<p class="quote">“Two hearts, one beautiful story, and a new chapter waiting to be celebrated…”</p>
+<p>With the blessings and love of our families, we invite you to join us for an evening filled with happiness, laughter, music and beautiful memories.</p>
+<p>Your presence will make our celebration truly special. ❤️</p>
+</div>
+
+<div class="card">
+<div class="eyebrow">A little surprise</div><p style="font-size:20px">Something special is hidden inside a heart. 💌</p>
+<p>Scratch the heart to reveal our special day ✨</p>
+<div class="heart-wrap"><div class="heart" id="heart">
+<div class="heart-inner"><div><div class="eyebrow" style="color:#7d1f39">SAVE THE DATE</div><div class="date" id="revealedDate"></div><small>The evening we celebrate love ❤️</small></div></div>
+<canvas id="scratch"></canvas></div></div>
+</div>
+
+<div class="card"><div class="eyebrow">Reception Details</div><div class="details">
+<div class="detail"><b>DATE</b><span id="date"></span></div><div class="detail"><b>TIME</b><span id="time"></span></div>
+<div class="detail"><b>VENUE</b><span id="venue"></span></div><div class="detail"><b>LOCATION</b><span id="location"></span></div>
+
+</div></div>
+<div class="details"></div><a
+  class="maps-btn"
+  href="https://maps.app.goo.gl/h42UC94FeWPaiax29"
+  target="_blank"
+  rel="noopener">
+  📍 View Venue on Google Maps
+</a>
+  
+
+<div class="card"><div class="eyebrow">A Note For You</div><div class="message" style="margin:15px auto">
+<p>Come with your smiles, stay for the memories, and celebrate this beautiful beginning with us. 🌹</p>
+<p>We would be delighted to have you with us on our special evening.</p>
+</div></div>
+
+<div class="card"><div class="eyebrow">Counting down to the celebration</div><div id="countdown">Loading...</div></div>
+
+<div class="final"><div class="eyebrow">With love & gratitude</div><h2 class="names" style="font-size:65px">Thank You ❤️</h2>
+<p class="footerline">Thank you for being a part of our happiness.</p><p class="footerline">Your presence and blessings mean more than words can say.</p>
+<p class="quote">We can't wait to celebrate with you! ✨</p><p style="font-size:21px;color:#e7c27d">Moni & Arif</p></div>
+</main></section>
+
+<script>
+for(const k of ["bride","groom","date","time","venue","location","revealedDate"])document.getElementById(k).textContent=k==="revealedDate"?INVITATION.date:INVITATION[k];
+const music=document.getElementById("music"),musicBtn=document.getElementById("musicBtn");
+musicBtn.onclick=()=>{if(music.paused){music.play();musicBtn.textContent="♫"}else{music.pause();musicBtn.textContent="♪"}};
+document.getElementById("openEnvelope").onclick=()=>{document.getElementById("intro").style.display="none";document.getElementById("invite").style.display="flex";music.play().catch(()=>{});musicBtn.textContent="♫";petals();fireworks(2200);stars()};
+function petals(){setInterval(()=>{const p=document.createElement("div");p.className="petal";p.textContent=["🌹","🌸","🌺","🍃"][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+"vw";p.style.animationDuration=5+Math.random()*5+"s";document.getElementById("petals").appendChild(p);setTimeout(()=>p.remove(),11000)},360)}
+function stars(){for(let i=0;i<70;i++){const s=document.createElement("i");s.className="twinkle";s.style.left=Math.random()*100+"vw";s.style.top=Math.random()*100+"vh";s.style.animationDelay=Math.random()*2+"s";document.body.appendChild(s)}}
+const heart=document.getElementById("heart"),canvas=document.getElementById("scratch"),ctx=canvas.getContext("2d");
+function resizeScratch(){canvas.width=heart.clientWidth*devicePixelRatio;canvas.height=heart.clientHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);ctx.fillStyle="#b88b52";ctx.fillRect(0,0,heart.clientWidth,heart.clientHeight);ctx.fillStyle="#f8e2b7";ctx.font="bold 19px serif";ctx.textAlign="center";ctx.fillText("SCRATCH TO REVEAL ✨",heart.clientWidth/2,heart.clientHeight/2)}resizeScratch();addEventListener("resize",resizeScratch);
+let down=false,strokes=0,done=false;function erase(e){if(done)return;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;ctx.globalCompositeOperation="destination-out";ctx.beginPath();ctx.arc(x,y,28,0,Math.PI*2);ctx.fill();strokes++;if(strokes>38){done=true;canvas.style.display="none";fireworks(3500);confetti()}}canvas.onpointerdown=e=>{down=true;erase(e)};canvas.onpointermove=e=>{if(down)erase(e)};window.onpointerup=()=>down=false;
+const target=new Date(INVITATION.countdown);setInterval(()=>{let d=Math.max(0,target-Date.now()),days=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);document.getElementById("countdown").textContent=`${days} DAYS • ${String(h).padStart(2,"0")} : ${String(m).padStart(2,"0")} : ${String(s).padStart(2,"0")}`},1000);
+function fireworks(ms){const c=document.getElementById("fireworks"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;const p=[];let st=performance.now();function burst(){const X=Math.random()*c.width,Y=80+Math.random()*c.height*.45;for(let i=0;i<65;i++){const a=Math.random()*Math.PI*2,q=2+Math.random()*5;p.push({x:X,y:Y,vx:Math.cos(a)*q,vy:Math.sin(a)*q,l:100})}}function loop(t){x.clearRect(0,0,c.width,c.height);if(t-st<ms&&Math.random()<.09)burst();p.forEach(z=>{z.x+=z.vx;z.y+=z.vy;z.vy+=.045;z.l--;x.globalAlpha=z.l/100;x.fillStyle="#f5d38d";x.fillRect(z.x,z.y,3,3)});if(t-st<ms||p.some(z=>z.l>0))requestAnimationFrame(loop)}requestAnimationFrame(loop)}
+function confetti(){for(let i=0;i<130;i++){const p=document.createElement("div");p.className="petal";p.textContent=["🎉","✨","💗","🌸"][i%4];p.style.left=Math.random()*100+"vw";p.style.animationDuration=2+Math.random()*3+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),6000)}}
+</script></body></html>
